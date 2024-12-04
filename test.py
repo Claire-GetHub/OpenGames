@@ -20,9 +20,15 @@ def main():
     label = Label(root, text='Games', font= ("Arial", 25))
 
 
+    # steam, epic games, battlenet, riot
     #all games you can choose
         # "gameName" : games application id 
-    options = {"wolfQuest":431180, "Terraria": 105600}
+    steam = {"wolfQuest":431180, "Terraria": 105600}
+    epicGames = {}
+    battleNet = {}
+    riot = {}
+
+    options = [steam, epicGames, battleNet, riot]
 
     #list box. 
         #root, cant be changed how its connected to the window
@@ -30,10 +36,11 @@ def main():
     optionBox = Listbox(root, font= ("Arial", 25))
 
     #adding all the options to the listbox
-    for option in options:
+    for platform in options:
         index = 0
-        optionBox.insert(index, option)
-        index += 1
+        for option in platform:
+            optionBox.insert(index, option)
+            index += 1
 
 
     #what runs when the button is clicked
@@ -41,6 +48,7 @@ def main():
         for i in optionBox.curselection():
             game = optionBox.get(i)   
 
+        #if game in steam ect.
         subprocess.run(f"start steam://run/{options[game]}", shell=True)
 
     #the countinue button
@@ -55,6 +63,8 @@ def main():
     optionBox.grid(row=1,column=0,sticky="NSEW")
     button.grid(row=2,column=0,sticky="NSEW")
 
+    #full screen without exit buttons
+    #root.attributes("-fullscreen", True)
 
     root.mainloop()
 
