@@ -93,10 +93,7 @@ def main():
 
     root.mainloop()
 
-    #what runs when the button is clicked
 
 
 if __name__ == "__main__":
     main()
-
-#subprocess.run(["G:\Games\Riot Games\Riot Client\RiotClientServices.exe", '--launch-product=valorant', '--launch-patchline=live'], shell=True)
