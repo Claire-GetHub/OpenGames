@@ -15,7 +15,7 @@ def main():
     #games label
         #root, cant be changed how its connected to the window
         #text, what the label says
-        #font, (*the font*, *the font size*)      
+        #font, (*the font*, *the font size*)    
     label = Label(root, text='Games', font= ("Arial", 25))
 
 
@@ -23,14 +23,14 @@ def main():
         #minecraft 
 
     #all games you can choose
-        # "gameName" : *games url* (found in properties) 
+        # "gameName" : *games url* (found in properties)
     steam = {
         "Halo": "steam://rungameid/1240440",
         "BrawlHalla": "steam://rungameid/291550",
         "Counter Strike 2": "steam://rungameid/730",
         "Apex Legends": "steam://rungameid/1172470"
         }
-        #"gameName" : *games url* (remove "&silent=true") 
+        #"gameName" : *games url* (remove "&silent=true")
     epicGames = {
         "Rocket League": 'com.epicgames.launcher://apps/9773aa1aa54f4f7b80e44bef04986cea%3A530145df28a24424923f5828cc9031a1%3ASugar?action=launch',
         "Fortnite": "com.epicgames.launcher://apps/fn%3A4fe75bbc5a674f4f9b356b5c90567da5%3AFortnite?action=launch"
